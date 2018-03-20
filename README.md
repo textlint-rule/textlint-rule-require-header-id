@@ -1,4 +1,4 @@
-# @textlint-rule/textlint-rule-require-header-id
+# @textlint-rule/textlint-rule-require-header-id [![Build Status](https://travis-ci.org/textlint-rule/textlint-rule-require-header-id.svg?branch=master)](https://travis-ci.org/textlint-rule/textlint-rule-require-header-id)
 
 textlint rule that require `{#id}` for each headers.
 
