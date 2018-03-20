@@ -1,0 +1,55 @@
+{
+  "name": "@textlint-rule/textlint-rule-require-header-id",
+  "version": "1.0.0",
+  "description": "textlint rule that require {#id} for each headers",
+  "keywords": [
+    "textlintrule",
+    "gitbook"
+  ],
+  "homepage": "https://github.com/textlint-rule/textlint-rule-require-header-id",
+  "bugs": {
+    "url": "https://github.com/textlint-rule/textlint-rule-require-header-id/issues"
+  },
+  "license": "MIT",
+  "author": "azu",
+  "files": [
+    "bin/",
+    "lib/",
+    "src/"
+  ],
+  "main": "lib/textlint-rule-require-header-id.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/textlint-rule/textlint-rule-require-header-id.git"
+  },
+  "scripts": {
+    "build": "textlint-scripts build",
+    "precommit": "lint-staged",
+    "postcommit": "git reset",
+    "prepublish": "npm run --if-present build",
+    "test": "textlint-scripts test",
+    "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,css}\"",
+    "watch": "textlint-scripts build --watch"
+  },
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "lint-staged": "^7.0.0",
+    "prettier": "^1.11.1",
+    "textlint-scripts": "^1.4.2"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,css}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "singleQuote": false,
+    "printWidth": 120,
+    "tabWidth": 4
+  }
+}
